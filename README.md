@@ -69,7 +69,7 @@ dualStorage **always** treats an Ajax status code of `0` as an indication it is 
     Backbone.DualStorage.offlineStatusCodes = [408];
 
 or a function that accepts the `response` object and returns an array:
-
+    
     Backbone.DualStorage.offlineStatusCodes = function(xhr) {
         var codes = [];
 
@@ -87,7 +87,7 @@ Data parsing
 Sometimes you may want to customize how data from the remote server is parsed before it's saved to localStorage.
 Typically your model's `parse` method takes care of this.
 Since dualStorage provides two layers of backend, we need a second parse method.
-For example, if your remote API returns data in a way that the default `parse` method interprets the result as a single record,
+For example, if your remote AP loop I returns data in a way that the default `parse` method interprets the result as a single record,
 use `parseBeforeLocalSave` to break up the data into an array of records like you would with [parse](http://backbonejs.org/#Model-parse).
 
 * The model's `parse` method still parses data read from localStorage.
